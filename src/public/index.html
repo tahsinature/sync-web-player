@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.2/plyr.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" type="image/x-icon" href="/favicon.png" />
+
+    <title>Sync Web Player</title>
+  </head>
+  <body>
+    <div class="container">
+      <video controls crossorigin playsinline poster="" muted="muted">
+        <source src="./media/movie.mp4" type="video/mp4" />
+        <!-- <source
+          src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4"
+          type="video/mp4"
+        /> -->
+
+        <!-- Caption files -->
+        <track
+          kind="captions"
+          label="English"
+          srclang="en"
+          src="./media/movie-English.srt"
+          default
+        />
+      </video>
+    </div>
+
+    <div class="footer">
+      <small>
+        Got the idea about this project from one of my friend from Indonesia.
+        One day we wanted to watch movie in sync, but couln't find a flexible
+        solution that works for pretty much everybody. So I decided to convert
+        that idea into code by next day.
+      </small>
+    </div>
+
+    <script
+      src="https://cdn.socket.io/4.5.0/socket.io.min.js"
+      integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.plyr.io/3.7.2/plyr.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
